@@ -5,40 +5,53 @@
 //if (si)
 //else
 
-//carrito de compras 
 
 //let login = prompt ("usuario");
  //let usuario = "fabricio";
  //let clave = prompt ("contraseña");
  //let contraseña = "12345";
 
- let disponible = 149
+ const iva= 0.21
 
  //Bebidas
+
  
- let producto = {
+
+ 
+ let Café= "Café"
+ let Latte= "Latte"
+ let Chocochino= "Chocochino"
+ let Machiatto= "Machiatto"
+ let Té= "Té"
+
+ let Donas= "Donas"
+ let Medialunas= "Medialunas"
+ let scones= "scones"
+ let Tortas= "Tortas"
+ 
+ const producto = {
      nombre: "Café",
      categoria: "bebidas",
      precio: 85
      
  }
  
- let producto2 = {
+ const producto2 = {
      nombre: "Latte",
      categoria: "bebidas",
      precio: 90
  }
- let producto3 = {
+ const producto3 = {
      nombre: "Chocochino",
      categoria: "bebidas",
      precio: 140
  }
- let producto4 = {
+ const producto4 = {
      nombre: "Machiatto",
      categoria: "bebidas",
      precio: 120
  }
- let producto5 = {
+ const producto5 = {
      nombre: "Té",
      categoria: "bebidas",
      precio: 90
@@ -46,22 +59,22 @@
  
  //Comida
  
- let producto6 = {
+ const producto6 = {
      nombre: "Donas",
      categoria: "comida",
      precio: 40
  }
- let producto7={
+ const producto7={
      nombre:"Medialunas",
      categoria: "comida",
      precio: 30
  }
- let producto8={
+ const producto8={
      nombre:"scones",
      categoria: "comida",
      precio: 60
  }
- let producto9={
+ const producto9={
      nombre:"Tortas",
      tipos: "Chocolate",
      categoria: "comida",
@@ -70,7 +83,15 @@
  
  
  const catalogo = [producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
- 
+
+ const combo = [
+    {Café: "Café", precio: 85},
+    {Donas:"Donas", precio: 40},
+ ]
+ const combo2 = []
+ const combo3 = []
+ const combo4 = []
+ const combo5 = []
  //for (let i=0; i<catalogo.length; i+=1) {
    // console.log (catalogo[i].nombre)
  //console.log(catalogo[i].precio)}
