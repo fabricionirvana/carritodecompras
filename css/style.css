@@ -31,7 +31,7 @@ border: #17973B 2px;
 
 /*mobile*/
 
-@media (max-width: 768px) {
+@media  (max-width: 468px) {
     body {
         background-color: #412725;
     }
