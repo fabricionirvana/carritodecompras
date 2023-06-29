@@ -11,7 +11,7 @@
  //let clave = prompt ("contraseña");
  //let contraseña = "12345";
 
- const iva= 0.21
+ const envio= 80
 
  //Bebidas
 
@@ -85,13 +85,24 @@
  const catalogo = [producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
 
  const combo = [
-    {Café: "Café", precio: 85},
-    {Donas:"Donas", precio: 40},
+    {producto: "Café", precio: 85},
+    {producto6:"Donas", precio: 40},
  ]
- const combo2 = []
- const combo3 = []
- const combo4 = []
- const combo5 = []
+ const combo2 = [
+    {producto2:"Latte", precio:90},
+    {producto7:"Meidalunas", precio:30}
+]
+ const combo3 = [
+    {producto3:"Chocochino", precio:140},
+    {producto8:"scones", precio:60}]
+ const combo4 = [
+    {producto4:"Machiatto", precio:120},
+    {producto9:"Tortas", precio:80},
+ ]
+ const combo5 = [
+    {producto5:"Té", precio:120},
+    {producto7:"Medialunas", precio:30}
+ ]
  //for (let i=0; i<catalogo.length; i+=1) {
    // console.log (catalogo[i].nombre)
  //console.log(catalogo[i].precio)}
