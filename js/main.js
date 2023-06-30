@@ -11,31 +11,34 @@
  //let clave = prompt ("contraseña");
  //let contraseña = "12345";
 
- const envio= 80
-
  //Bebidas
  let Café = {
     Tipo: "Bebida",
+    Marca: "Nestcafé",
     Descripcion: "Colombiano",
     Precio: 85,
  }
  let Latte = {
     Tipo: "Bebida",
+    Marca: "Dolce Gusto",
     Descripcion: "Leche de vaca",
     Precio: 95,
  }
  let Chocochino = {
     Tipo: "Bebida",
+    Marca: "Starbucks",
     Descripcion: "Caramel",
     Precio: 105,
  }
  let Machiatto = {
     Tipo: "Bebida",
+    Marca: "Dolce Gusto",
     Descripcion: "Con canela",
     Precio: 115,
  }
  let Té = {
     Tipo: "Bebida",
+    Marca: "Twinings",
     Descripcion: "Negro",
     Precio: 80,
  }
@@ -146,7 +149,7 @@
  }
 
 
- let resultado= combo.filter ((producto)=>producto.precio>envio)
+
  
  
  
