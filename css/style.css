@@ -27,6 +27,17 @@ border: #17973B 2px;
 
 }
 .carrito :hover {background-color: #90FFAF; color: #412725;}
+.boton {position: absolute;
+    top: 280px;
+    left: 500px;
+	background: #17973B;
+	border: 2px solid #17973B;
+	border-radius: 4px;
+	color: #d9d9d9;
+width: 250px;
+height: 50px;
+}
+
 }
 
 /*mobile*/

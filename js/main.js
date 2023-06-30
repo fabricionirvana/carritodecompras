@@ -14,15 +14,34 @@
  const envio= 80
 
  //Bebidas
+ let Café = {
+    Tipo: "Bebida",
+    Descripcion: "Colombiano",
+    Precio: 85,
+ }
+ let Latte = {
+    Tipo: "Bebida",
+    Descripcion: "Leche de vaca",
+    Precio: 95,
+ }
+ let Chocochino = {
+    Tipo: "Bebida",
+    Descripcion: "Caramel",
+    Precio: 105,
+ }
+ let Machiatto = {
+    Tipo: "Bebida",
+    Descripcion: "Con canela",
+    Precio: 115,
+ }
+ let Té = {
+    Tipo: "Bebida",
+    Descripcion: "Negro",
+    Precio: 80,
+ }
 
  
 
- 
- let Café= "Café"
- let Latte= "Latte"
- let Chocochino= "Chocochino"
- let Machiatto= "Machiatto"
- let Té= "Té"
 
  let Donas= "Donas"
  let Medialunas= "Medialunas"
@@ -80,9 +99,10 @@
      categoria: "comida",
      precio: 80
  } 
+
  
  
- const catalogo = [producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
+ //const catalogo = [producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
 
  const combo = [
     {producto: "Café", precio: 85},
@@ -90,7 +110,7 @@
  ]
  const combo2 = [
     {producto2:"Latte", precio:90},
-    {producto7:"Meidalunas", precio:30}
+    {producto7:"Meidalunas", precio:30},
 ]
  const combo3 = [
     {producto3:"Chocochino", precio:140},
@@ -103,22 +123,30 @@
     {producto5:"Té", precio:120},
     {producto7:"Medialunas", precio:30}
  ]
- //for (let i=0; i<catalogo.length; i+=1) {
-   // console.log (catalogo[i].nombre)
- //console.log(catalogo[i].precio)}
+
+
+
+
  
  
  const carrito = []
 
- function carritodecompras()  {}
+ function carritodecompras()  {
+    return Café
+ }
+ console.log (carritodecompras)
+
  
- carrito.push (producto)
- carrito.push (producto3)
+ //carrito.push (producto)
+ //carrito.push (producto3)
  
  for(let i=0; i<carrito.length; i+=1){
      console.log(carrito[i].nombre)
      console.log(carrito[i].precio)
  }
+
+
+ let resultado= combo.filter ((producto)=>producto.precio>envio)
  
  
  
