@@ -6,6 +6,15 @@
 //else
 
 console.log (document)
+console.log (localStorage)
+
+/*localStorage.setItem ("nombre", "fabricio");
+ localStorage.getItem ("nombre")
+let nombre = localStorage.getItem ("fabricio")*/
+
+localStorage.removeItem ("nombre");
+localStorage.removeItem ("juegos")
+
 //let login = prompt ("usuario");
  //let usuario = "fabricio";
  //let clave = prompt ("contraseña");
@@ -211,7 +220,6 @@ function Verbebidas(Bebida){
 
 function sinresultado(){
   console.log("No hay Resultados")
-  document.write("<p style='color:red'>No hay Resultados</p>")
 }
 
 function filtrarCafé(){
@@ -255,7 +263,7 @@ function filtrarBebida(){
   if(resultado.length){
       Verbebidas(resultado)
       prompt ("¿que desayuno necesitas?")
-      console.log (resultado.length)
+      console.log ()
   }else {
       sinresultado()
   }
