@@ -12,6 +12,10 @@ console.log (document)
  //let contraseña = "12345";
 
  //Bebidas
+
+
+    
+
  
  let Café = {
     Tipo: "Bebida",
@@ -46,7 +50,7 @@ console.log (document)
  
 
  
-
+/* Descartados*/
 
 /* let Donas= "Donas"
  let Medialunas= "Medialunas"
@@ -135,29 +139,33 @@ console.log (document)
 
  
  
- const carrito = []
+ /*const carrito = [
+    {Café},{Latte},{Chocochino},{Machiatto},{Té}
+ ]
 
- function carritodecompras()  {
-    return Café
- }
- console.log (carritodecompras)
+ function carritodecompras()  {}
+
+
 
  
  //carrito.push (producto)
  //carrito.push (producto3)
  
- for(let i=0; i<carrito.length; i+=1){
+ /*for(let i=0; i<carrito.length; i+=1){
      console.log(carrito[i].nombre)
      console.log(carrito[i].precio)
- }
+ }*/
 
 
 /* Buscador */
 
- /*let marca = prompt("Solicitar Marca")
-let year = prompt("Solicitar Tipo")
-let minimo = prompt("Solicitar Descripcion")
-let maximo = prompt("Solicitar Precio")*/
+ /*let marca = prompt ("Solicitar Marca")
+let Tipo = prompt("Que tipo de desayuno quieres?")
+/*let Descripcion = prompt("Solicitar Descripcion")
+let Precio = prompt("Solicitar Precio")*/
+
+
+
 
 /*let Bebida= [
    {Tipo: "Café",
@@ -181,20 +189,23 @@ let maximo = prompt("Solicitar Precio")*/
     Descripcion: "Manzanilla",
     Precio: 80,}
 ]*/
-let Bebida = [
-    {Café}, {Chocochino}, {Machiatto}, {Té}, {Latte},
-];
+
+let Bebida=[
+    {Café},{Latte},{Chocochino},{Machiatto},{Té}
+]
 
 const datosBusqueda = {
-    marca: "",
-	Tipo: '',
-	Descripcion: "",
-	Precio:"",
+    Café:  '',
+	Chocochino: '',
+	Machiatto:  '',
+	Té: '',
+    Latte: '',
 }
 
 function Verbebidas(Bebida){
     Bebida.forEach( Bebida => {
-        console.log(Bebida.marca + " " + Bebida.Descripcion + " " + Bebida.Tipo + " " + Bebida.Precio + "")
+
+
     })
 }
 
@@ -203,43 +214,61 @@ function sinresultado(){
   document.write("<p style='color:red'>No hay Resultados</p>")
 }
 
-function filtrarMarca(Bebida){
-  if(datosBusqueda.marca){
-      return Bebida.Marca == datosBusqueda.marca
+function filtrarCafé(){
+  if(datosBusqueda.Café){
+      return Bebida.Café == datosBusqueda.Café
   }
   return Bebida;
 }
 
-function filtrarTipo(Bebida){
-  if(datosBusqueda.Tipo){
-      return Bebida.Tipo == datosBusqueda.Tipo
+function filtrarChocochino(){
+  if(datosBusqueda.Chocochino){
+      return Bebida.Chocochino == datosBusqueda.Chocochino
   }
   return Bebida;
 }
 
-function filtrarPrecio(Bebida){
-  if(datosBusqueda.Precio){
-      return Bebida.Precio >= datosBusqueda.Precio
+function filtrarMachiatto(){
+  if(datosBusqueda.Machiatto){
+      return Bebida.Machiatto >= datosBusqueda.Machiatto
   }
   return Bebida;
 }
 
-function filtrarDescripcion(Bebida){
-  if(datosBusqueda.Descripcion){
-      return Bebida.Descripcion <= datosBusqueda.Descripcion
+function filtrarTé(){
+  if(datosBusqueda.Té){
+      return Bebida.Té <= datosBusqueda.Té
   }
   return Bebida;
 }
+
+function filtrarLatte(){
+    if(datosBusqueda.Latte){
+        return Bebida.Latte <= datosBusqueda.Latte
+    }
+    return Bebida;
+  }
 
 function filtrarBebida(){
-  let resultado = Bebida.filter(filtrarMarca).filter(filtrarPrecio).filter(filtrarDescripcion).filter(filtrarTipo);
-  console.log(resultado.length)
+  let resultado = Bebida.filter(filtrarCafé).filter(filtrarChocochino).filter(filtrarMachiatto).filter(filtrarTé).filter(filtrarLatte);
+  /*console.log(resultado.length)*/
   if(resultado.length){
       Verbebidas(resultado)
+      prompt ("¿que desayuno necesitas?")
+      console.log (resultado.length)
   }else {
       sinresultado()
   }
 }
+
+/*let Buscador = prompt("¿que desayuno necesitas?")
+if (Bebida){filtrarBebida== true,
+    console.log (Verbebidas)}
+    else{
+        alert ("No se encontraron articulos con ese nombre")
+
+        
+    }*/
 
 
 filtrarBebida();
