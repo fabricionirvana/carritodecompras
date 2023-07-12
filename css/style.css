@@ -2,6 +2,7 @@ body {
     background-color: #412725;
     display: grid;
     margin: auto;
+    padding: 0%;
 }
 @media (min-width: 1024px) {
 .mainindex {
@@ -9,7 +10,7 @@ body {
     align-content: center;
     align-items: baseline;
 }
-main div input {
+.carrito {
     position: absolute;
     top: 180px;
     left: 400px;
@@ -33,7 +34,8 @@ border: #E3A55C 2px;
 }
 .carrito :hover {background-color: #762627; color: #E3A55C;}
 
-}
+
+
 .boton {position: absolute;
     top: 280px;
     left: 500px;
@@ -196,7 +198,9 @@ top: 1373px;
 height: 76px;
 flex-shrink: 0;
 background: linear-gradient(180deg, #762627 0%, rgba(40, 8, 8, 0.00) 100%);
-
+padding: 0%;
+margin: 0px;
+margin-right: auto;
 }
 .buttcafe {position: absolute;
     top: 350px;

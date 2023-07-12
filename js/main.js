@@ -148,11 +148,13 @@ localStorage.removeItem ("juegos")
 
  
  
- /*const carrito = [
+ const carrito = [
     {Café},{Latte},{Chocochino},{Machiatto},{Té}
  ]
 
- function carritodecompras()  {}
+ function carritodecompras()  {
+    let carritodecompras = carrito=>Bebida
+ }
 
 
 
