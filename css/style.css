@@ -1,5 +1,7 @@
 body {
     background-color: #412725;
+    display: grid;
+    margin: auto;
 }
 @media (min-width: 1024px) {
 .mainindex {
@@ -10,7 +12,7 @@ body {
 main div input {
     position: absolute;
     top: 180px;
-    left: 500px;
+    left: 400px;
     color: #d9d9d9;
     text-align: center;
     font-size: 20px;
@@ -19,8 +21,8 @@ main div input {
     display: grid;
     align-items: center;
     align-content: center;
-    width: 221px;
-height: 44px;
+    width: 290px;
+    height: 46px;
 flex-shrink: 0;
 border-radius: 4px;
 background: #E3A55C;
@@ -30,6 +32,8 @@ border: #E3A55C 2px;
 
 }
 .carrito :hover {background-color: #762627; color: #E3A55C;}
+
+}
 .boton {position: absolute;
     top: 280px;
     left: 500px;
@@ -374,7 +378,7 @@ line-height: normal;
 }
 p {position: absolute;
     top: 240px;
-    left: 61px;
+    left: 61PX;
     color: #E3A55C;
 text-align: center;
 font-family: Roboto;
