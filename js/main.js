@@ -1,9 +1,20 @@
-//Comienzo codigo js
-//let= variable (se puede reasignar)
-//const= constantes (no se puede cambiar)
-//"cadena de caracteres"
-//if (si)
-//else
+document.addEventListener ("keyup", e=>{
+
+    if (e.target.matches("#buscador")){
+        document.querySelectorAll(".Articulos") .forEach (Bebida =>{
+            Bebida.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+           ?Bebida.classList.remove("Filtro")
+           :Bebida.classList.add("Filtro")
+        }
+            )
+    }
+e.target.matches ("#buscador")
+
+    console.log(e.target.value)
+})
+
+
+
 
 console.log (document)
 console.log (localStorage)
@@ -153,7 +164,7 @@ localStorage.removeItem ("juegos")
  ]
 
  function carritodecompras()  {
-    let carritodecompras = carrito=>Bebida
+    let carritodecompras= carrito==Bebida
  }
 
 
@@ -231,6 +242,13 @@ function filtrarCafé(){
   return Bebida;
 }
 
+function filtrarLatte(){
+    if(datosBusqueda.Latte){
+        return Bebida.Latte <= datosBusqueda.Latte
+    }
+    return Bebida;
+  }
+
 function filtrarChocochino(){
   if(datosBusqueda.Chocochino){
       return Bebida.Chocochino == datosBusqueda.Chocochino
@@ -252,12 +270,6 @@ function filtrarTé(){
   return Bebida;
 }
 
-function filtrarLatte(){
-    if(datosBusqueda.Latte){
-        return Bebida.Latte <= datosBusqueda.Latte
-    }
-    return Bebida;
-  }
 
 function filtrarBebida(){
   let resultado = Bebida.filter(filtrarCafé).filter(filtrarChocochino).filter(filtrarMachiatto).filter(filtrarTé).filter(filtrarLatte);
