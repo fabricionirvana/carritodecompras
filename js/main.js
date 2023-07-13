@@ -1,6 +1,7 @@
 document.addEventListener ("keyup", e=>{
 
     if (e.target.matches("#buscador")){
+        if (e.key ==="Escape")e.target.value = ""
         document.querySelectorAll(".Articulos") .forEach (Bebida =>{
             Bebida.textContent.toLowerCase().includes(e.target.value.toLowerCase())
            ?Bebida.classList.remove("Filtro")
@@ -274,12 +275,13 @@ function filtrarTé(){
 function filtrarBebida(){
   let resultado = Bebida.filter(filtrarCafé).filter(filtrarChocochino).filter(filtrarMachiatto).filter(filtrarTé).filter(filtrarLatte);
   /*console.log(resultado.length)*/
+  console.log(resultado)
   if(resultado.length){
       Verbebidas(resultado)
-      prompt ("¿que desayuno necesitas?")
       console.log ()
   }else {
       sinresultado()
+      let resultado = document.querySelector ("#buscar1")
   }
 }
 

@@ -28,7 +28,7 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Productos</a>
+                  <a class="nav-link" href="producto.html">Productos</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,47 +48,25 @@
       </nav>
     </header>
       <main class="mainindex">
-
-      <button class="carrito" id="carrito de compras" onclick="carritodecompras()">Carrito de compras</button>
+        <div class="carritodecompras">
+      <button id="carrito" onclick="carritodecompras()">Carrito de compras</button>
+    </div>
+      <div class="portada">
+        <img src="FOTOCAFETERIA2.jpg" alt="portada">
+      </div>
 
       <div class="buscador" id="buscador">
-        <input class="contenedor" type="search" placeholder="Buscar" onclick="datosBusqueda">
-        <button class="buscar1" type="button" onclick="console.log (Bebida)">Buscar</button>
+        <input class="contenedor" type="search" placeholder="Buscar">
+        <button id="buscar1" type="submit" onclick="filtrarBebida()">Buscar</button>
       </div>
-      
-<div class="Bebida">
-       <div class="cafe">
-        <img src="cafe.png" alt="">
-        <p>Café</p>
-        <button class="buttcafe" onclick="console.log (Café)">Agregar a carrito</button>
-        <button class="cancelar1">Cancelar</button>
-       </div>
-     
-       <div class="Latte"> 
-         <p>Latte</p>
-        <img src="latte.png" alt="">
-        <button class="buttlatte" onclick="console.log (Latte)">Agregar a carrito</button>
-        <button class="cancelar2">Cancelar</button>
-       </div>
-       <div class="chocochino">
-        <P>Chocochino</P>
-        <img src="chocochino 1.png" alt="">
-        <button class="buttchoco" onclick="console.log (Chocochino)">Agregar a carrito</button>
-        <button class="cancelar3">Cancelar</button>
-       </div>
-       <div class="machiatto">
-        <p>Machiatto</p>
-        <img src="machiatto 1.png" alt="">
-        <button class="buttmach" onclick="console.log (Machiatto)">Agregar a carrito</button>
-        <button class="cancelar4">Cancelar</button>
-       </div>
-       <div class="te">
-        <p>Té</p>
-        <img src="te 1.png" alt="">
-        <button class="butonte" onclick="console.log (Té)">Agregar a carrito</button>
-        <button class="te5">Cancelar</button>
-       </div>
-      </div>
+      <ul id="Articulo">
+        <li class="Articulos">☕Café</li>
+        <li class="Articulos">🥛Latte</li>
+        <li class="Articulos">🍫Chocochino</li>
+        <li class="Articulos">🥤Machiatto</li>
+        <li class="Articulos">🍵Té</li>
+
+      </ul>
       </main>
       <footer class="footerindex">
         <img class="imgfooter" src="Group.png" alt="">
