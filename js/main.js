@@ -4,8 +4,8 @@ document.addEventListener ("keyup", e=>{
         if (e.key ==="Escape")e.target.value = ""
         document.querySelectorAll(".Articulos") .forEach (Bebida =>{
             Bebida.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-           ?Bebida.classList.remove("Filtro")
-           :Bebida.classList.add("Filtro")
+           ?Bebida.classList.remove(".Filtro")
+           :Bebida.classList.add(".Filtro")
         }
             )
     }
