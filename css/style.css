@@ -463,6 +463,8 @@ flex-shrink: 0;
     }
     .mainindex{
         display: grid;
+        justify-content: space-around;
+        justify-items: auto;
     }
 
     #Bebida {
@@ -476,12 +478,15 @@ flex-shrink: 0;
     .li {
         margin: 5px 0;
     }
-    .portada {display: flex;
-        flex-direction: column;
+    .portada {
+        display: flex;
+        flex-direction: row;
         align-items: center;
         margin-top: 30px;
+        align-content: center;
+        
     }
-    
+
     .buscador {
         display: flex;
         align-content: space-between;
@@ -500,8 +505,8 @@ flex-shrink: 0;
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
-        width: 140px;
-        height: 40px;
+        width: 240px;
+        height: 46px;
         border-radius: 4px;
     background: #E3A55C;
     color: #2D2724;
@@ -529,7 +534,7 @@ flex-shrink: 0;
     flex-direction: column;
     margin-top: 100px;
     align-items: flex-end;
-    margin-right: 20px;
+    margin-right: 50px;
     }
     #carrito {
     font-family: 'Roboto', sans-serif;
@@ -546,6 +551,7 @@ flex-shrink: 0;
     #carrito :hover {background-color: #762627; color: #E3A55C;}
     .footerindex {
         display: flex;
+        height: 75px;
         align-content: space-between; 
         align-items: flex-start;
     flex-shrink: 0;
