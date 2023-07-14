@@ -285,6 +285,7 @@ function filtrarBebida(){
   }
 }
 
+Bebida.push ("")
 /*let Buscador = prompt("¿que desayuno necesitas?")
 if (Bebida){filtrarBebida== true,
     console.log (Verbebidas)}
