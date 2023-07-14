@@ -22,7 +22,7 @@ body {
     color: #E3A55C;
     text-align: center;
 }
-.li {
+.Articulos {
     margin: 5px 0;
 }
 .portada {display: flex;
@@ -475,7 +475,7 @@ flex-shrink: 0;
         color: #E3A55C;
         text-align: center;
     }
-    .li {
+    .Articulos {
         margin: 5px 0;
         align-items: center;
         align-content: center;
