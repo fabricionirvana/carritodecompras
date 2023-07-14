@@ -14,7 +14,7 @@ body {
     align-items: center;
 }
 
-#Bebida {
+#listadearticulos {
     font-size: 30px;
     margin-top: 80px;
     list-style: none;
@@ -22,7 +22,7 @@ body {
     color: #E3A55C;
     text-align: center;
 }
-.Articulos {
+.articulos {
     margin: 5px 0;
 }
 .portada {display: flex;
@@ -31,7 +31,7 @@ body {
     margin-top: 30px;
 }
 
-.buscador {
+.contenedor {
     display: flex;
     align-content: space-between;
     flex-direction: row;
@@ -59,7 +59,7 @@ border: #E3A55C 2px;
 
 }
 
-.contenedor {
+#buscador {
     display: flex;
     margin-top: 50px;
     text-align: center;
@@ -467,7 +467,7 @@ flex-shrink: 0;
         justify-items: auto;
     }
 
-    #Bebida {
+    #listadearticulos {
         font-size: 30px;
         margin-top: 80px;
         list-style: none;
@@ -475,7 +475,7 @@ flex-shrink: 0;
         color: #E3A55C;
         text-align: center;
     }
-    .Articulos {
+    .articulos {
         margin: 5px 0;
         align-items: center;
         align-content: center;
@@ -495,7 +495,7 @@ flex-shrink: 0;
         height: 224px;
     }
 
-    .buscador {
+    .contenedor {
         display: flex;
         align-content: space-between;
         flex-direction: row;
@@ -523,7 +523,7 @@ flex-shrink: 0;
     
     }
     
-    .contenedor {
+    #buscador {
         display: flex;
         margin-top: 50px;
         text-align: center;

@@ -2,10 +2,10 @@ document.addEventListener ("keyup", e=>{
 
     if (e.target.matches("#buscador")){
         if (e.key ==="Escape")e.target.value = ""
-        document.querySelectorAll(".Articulos") .forEach (Bebida =>{
+        document.querySelectorAll(".articulos") .forEach (Bebida =>{
             Bebida.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-           ?Bebida.classList.remove(".Filtro")
-           :Bebida.classList.add(".Filtro")
+           ?Bebida.classList.remove("filtro")
+           :Bebida.classList.add("filtro")
         }
             )
     }
