@@ -182,10 +182,11 @@ localStorage.removeItem ("juegos")
 
 /* Buscador */
 
- /*let marca = prompt ("Solicitar Marca")
+/*let marca = prompt ("Solicitar Marca")
 let Tipo = prompt("Que tipo de desayuno quieres?")
-/*let Descripcion = prompt("Solicitar Descripcion")
+let Descripcion = prompt("Solicitar Descripcion")
 let Precio = prompt("Solicitar Precio")*/
+
 
 
 
@@ -217,12 +218,19 @@ let Bebida=[
     {Café},{Latte},{Chocochino},{Machiatto},{Té}
 ]
 
-const datosBusqueda = {
+/*const datosBusqueda = {
     Café:  '',
 	Chocochino: '',
 	Machiatto:  '',
 	Té: '',
     Latte: '',
+}*/
+
+const datosBusqueda = {
+    Tipo:  '',
+	Marca: '',
+	Descripcion:  '',
+	Precio: '',
 }
 
 function Verbebidas(Bebida){
@@ -236,56 +244,51 @@ function sinresultado(){
   console.log("No hay Resultados")
 }
 
-function filtrarCafé(){
-  if(datosBusqueda.Café){
-      return Bebida.Café == datosBusqueda.Café
+function filtrarTipo(){
+  if(datosBusqueda.Tipo){
+      return Bebida.tipo == datosBusqueda.Tipo
   }
   return Bebida;
 }
 
-function filtrarLatte(){
-    if(datosBusqueda.Latte){
-        return Bebida.Latte <= datosBusqueda.Latte
+function filtrarMarca(){
+    if(datosBusqueda.Marca){
+        return Bebida.marca<= datosBusqueda.Marca
     }
     return Bebida;
   }
 
-function filtrarChocochino(){
-  if(datosBusqueda.Chocochino){
-      return Bebida.Chocochino == datosBusqueda.Chocochino
+function filtrarDescripcion(){
+  if(datosBusqueda.Descripcion){
+      return Bebida.descripcion == datosBusqueda.Descripcion
   }
   return Bebida;
 }
 
-function filtrarMachiatto(){
-  if(datosBusqueda.Machiatto){
-      return Bebida.Machiatto >= datosBusqueda.Machiatto
+function filtrarPrecio(){
+  if(datosBusqueda.Precio){
+      return Bebida.precio >= datosBusqueda.Precio
   }
   return Bebida;
 }
 
-function filtrarTé(){
-  if(datosBusqueda.Té){
-      return Bebida.Té <= datosBusqueda.Té
-  }
-  return Bebida;
-}
+
 
 
 function filtrarBebida(){
-  let resultado = Bebida.filter(filtrarCafé).filter(filtrarChocochino).filter(filtrarMachiatto).filter(filtrarTé).filter(filtrarLatte);
-  /*console.log(resultado.length)*/
+  let resultado = Bebida.filter(filtrarTipo).filter(filtrarMarca).filter(filtrarDescripcion).filter(filtrarPrecio);
+  console.log(resultado.length)
   console.log(resultado)
   if(resultado.length){
       Verbebidas(resultado)
-      console.log ()
+      console.log ("")
   }else {
       sinresultado()
       let resultado = document.querySelector ("#buscar1")
   }
 }
 
-Bebida.push ("")
+/*Bebida.push ("")
 /*let Buscador = prompt("¿que desayuno necesitas?")
 if (Bebida){filtrarBebida== true,
     console.log (Verbebidas)}
