@@ -489,7 +489,7 @@ flex-shrink: 0;
 
     #listadearticulos {
         font-size: 30px;
-        margin-top: 80px;
+        margin-top: 10px;
         list-style: none;
         font-weight: 600;
         color: #E3A55C;
@@ -517,6 +517,7 @@ flex-shrink: 0;
 
     .contenedor {
         display: flex;
+        margin-top: 15px;
         align-content: space-between;
         flex-direction: row;
         flex-direction: column;
@@ -529,7 +530,7 @@ flex-shrink: 0;
     
     #buscador {
         display: flex;
-        margin-top: 50px;
+        margin-top: 15px;
         text-align: center;
         align-items: center;
         width: 250px;
