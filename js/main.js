@@ -11,9 +11,28 @@ document.addEventListener ("keyup", e=>{
     }
 e.target.matches ("#buscador")
 
-    console.log(e.target.value)
+    /*console.log(e.target.value)*/
 })
+/*Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'No se encontraron resultados!',
+  })*/
 
+ /* Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Your work has been saved',
+    showConfirmButton: false,
+    timer: 1500
+  })*/
+  /*Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Your work has been saved',
+    showConfirmButton: false,
+    timer: 2500
+  })*/
 
 
 
@@ -218,13 +237,34 @@ let Bebida=[
     {Café},{Latte},{Chocochino},{Machiatto},{Té}
 ]
 
-/*const datosBusqueda = {
-    Café:  '',
-	Chocochino: '',
-	Machiatto:  '',
-	Té: '',
-    Latte: '',
-}*/
+class Producto {
+    constructor (tipo,marca,descripcion,precio)
+    {
+        this.tipo =  tipo,
+        this.marca = marca,
+        this.descripcion = descripcion,
+        this.precio = precio
+    }
+}
+
+Array = []
+
+const bebidaCafe = new Producto
+("Cafe","Nestcafe","Colombiano",85);
+const bebidaLatte = new Producto
+("Latte","Dolce Gusto","Leche de vaca",95);
+const bebidaChocochino = new Producto
+("Chocochino","Starbucks","Caramel",105);
+const bebidaMachiatto = new Producto
+("Machiatto","Dolce Gusto","Con canela",115);
+const bebidaTé = new Producto
+("Té","Twinings","Negro",80);
+
+Array.push (bebidaCafe)
+Array.push (bebidaLatte)
+Array.push (bebidaChocochino)
+Array.push (bebidaMachiatto)
+Array.push (bebidaTé)
 
 const datosBusqueda = {
     Tipo:  '',
