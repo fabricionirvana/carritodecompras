@@ -1,3 +1,4 @@
+/*BUSCADOR */
 document.addEventListener ("keyup", e=>{
 
     if (e.target.matches("#buscador")){
@@ -90,148 +91,115 @@ localStorage.removeItem ("juegos")
  
 
  
-/* Descartados*/
-
-/* let Donas= "Donas"
- let Medialunas= "Medialunas"
- let scones= "scones"
- let Tortas= "Tortas"
- 
- const producto = {
-     nombre: "Café",
-     categoria: "bebidas",
-     precio: 85
-     
- }
- 
- const producto2 = {
-     nombre: "Latte",
-     categoria: "bebidas",
-     precio: 90
- }
- const producto3 = {
-     nombre: "Chocochino",
-     categoria: "bebidas",
-     precio: 140
- }
- const producto4 = {
-     nombre: "Machiatto",
-     categoria: "bebidas",
-     precio: 120
- }
- const producto5 = {
-     nombre: "Té",
-     categoria: "bebidas",
-     precio: 90
- }
- 
- //Comida
- 
- const producto6 = {
-     nombre: "Donas",
-     categoria: "comida",
-     precio: 40
- }
- const producto7={
-     nombre:"Medialunas",
-     categoria: "comida",
-     precio: 30
- }
- const producto8={
-     nombre:"scones",
-     categoria: "comida",
-     precio: 60
- }
- const producto9={
-     nombre:"Tortas",
-     tipos: "Chocolate",
-     categoria: "comida",
-     precio: 80
- } 
- 
 
  
  
- //const catalogo = [producto, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
-
- const combo = [
-    {producto: "Café", precio: 85},
-    {producto6:"Donas", precio: 40},
- ]
- const combo2 = [
-    {producto2:"Latte", precio:90},
-    {producto7:"Meidalunas", precio:30},
-]
- const combo3 = [
-    {producto3:"Chocochino", precio:140},
-    {producto8:"scones", precio:60}]
- const combo4 = [
-    {producto4:"Machiatto", precio:120},
-    {producto9:"Tortas", precio:80},
- ]
- const combo5 = [
-    {producto5:"Té", precio:120},
-    {producto7:"Medialunas", precio:30}
- ]*/
 
 
 
+
+
+ /*CARRITO DE COMPRAS */
+ 
+
+
+
+ let articuloscarrito = [];
+  const carrito = document.querySelector ("#carrito")
+  const carritodecompras = document.querySelector ("#articulos")
+  const vaciarCarritoBtn = document.querySelector('#vaciar-carrito')
+  const contenedorCarrito = document.querySelector('#lista-carrito tbody')
+
+  listaProductos.addEventListener('click', agregarProducto);
+vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+carrito.addEventListener('click', eliminarProducto)
+
+/*FUNCIONES*/
+function eliminarProducto(evt){
+    evt.preventDefault();
+    console.log(evt.target.parentElement)
+    if(evt.target.classList.contains('borrar-producto')){
+        const producto = evt.target.parentElement.parentElement;
+        const productoId = producto.querySelector('a').getAttribute('data-id');
+
+        articulosCarrito = articulosCarrito.filter( producto => producto.id !== productoId)
+
+        carritoHTML();
+    }
+}
+function agregarProducto(evt){
+    evt.preventDefault()
+    if(evt.target.classList.contains('agregar-carrito')){
+        const producto = evt.target.parentElement.parentElement
+        leerDatosProducto(producto)
+    } 
+}
+ 
+function carritoHTML(){
+    vaciarCarrito()
+    articulosCarrito.forEach( producto => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>
+                <img src="${producto.imagen}" width="100" />
+            </td>
+            <td>${producto.titulo}</td>
+            <td>${producto.precio}</td>
+            <td>${producto.cantidad}</td>
+            <td>
+                <a href="#" class="borrar-producto" data-id="${producto.id}">X</a>
+            </td>
+        `;
+        contenedorCarrito.appendChild(fila)
+    })
+
+}
+function leerDatosProducto(item){
+    const infoProducto = {
+        imagen: item.querySelector('img').src,
+        titulo: item.querySelector('h4').textContent,
+        precio: item.querySelector('.precio span').textContent,
+        id: item.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
+    }
+
+    if(articulosCarrito.some( item => item.id === infoProducto.id)){
+        const productos = articulosCarrito.map( producto => {
+            if(producto.id === infoProducto.id){
+                let cantidad = parseInt(producto.cantidad);
+                cantidad +=1;
+                producto.cantidad = cantidad
+                return producto;
+            }else {
+                return producto;
+            }
+        })
+        articulosCarrito = productos.slice();
+    }else {
+        articulosCarrito.push(infoProducto)
+    }
+
+    carritoHTML()
+}
 
  
- 
- const carrito = [
-    {Café},{Latte},{Chocochino},{Machiatto},{Té}
- ]
-
- function carritodecompras()  {
-    let carritodecompras= carrito==Bebida
- }
-
-
+  function vaciarCarrito(){
+    while(contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+    }
+}
 
  
  //carrito.push (producto)
  //carrito.push (producto3)
  
- /*for(let i=0; i<carrito.length; i+=1){
-     console.log(carrito[i].nombre)
-     console.log(carrito[i].precio)
- }*/
-
-
-/* Buscador */
-
-/*let marca = prompt ("Solicitar Marca")
-let Tipo = prompt("Que tipo de desayuno quieres?")
-let Descripcion = prompt("Solicitar Descripcion")
-let Precio = prompt("Solicitar Precio")*/
 
 
 
 
 
-/*let Bebida= [
-   {Tipo: "Café",
-    Marca: "Nestcafe",
-    Descripcion: "Colombiano",
-    Precio: 85,},
-   {Tipo: "Latte",
-     Marca: "Dolce Gusto",
-    Descripcion: "Leche de vaca",
-     Precio: 95, },
-   { Tipo: "Chocochino",
-     Marca: "Starbucks",
-     Descripcion: "Caramel",
-     Precio: 105,},
-   {Tipo: "Machiatto",
-    Marca: "Dolce Gusto",
-    Descripcion: "Con canela",
-    Precio: 115,},
-   {Tipo: "Té",
-    Marca: "Twinings",
-    Descripcion: "Manzanilla",
-    Precio: 80,}
-]*/
+
+
 
 let Bebida=[
     {Café},{Latte},{Chocochino},{Machiatto},{Té}
