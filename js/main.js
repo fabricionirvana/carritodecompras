@@ -104,9 +104,9 @@ localStorage.removeItem ("juegos")
 
 
 
- let articuloscarrito = [];
+ let articulosCarrito = [];
   const carrito = document.querySelector ("#carrito")
-  const carritodecompras = document.querySelector ("#articulos")
+  const listaProductos = document.querySelector("#lista-productos");
   const vaciarCarritoBtn = document.querySelector('#vaciar-carrito')
   const contenedorCarrito = document.querySelector('#lista-carrito tbody')
 
@@ -157,7 +157,7 @@ function carritoHTML(){
 function leerDatosProducto(item){
     const infoProducto = {
         imagen: item.querySelector('img').src,
-        titulo: item.querySelector('h4').textContent,
+        titulo: item.querySelector('p').textContent,
         precio: item.querySelector('.precio span').textContent,
         id: item.querySelector('a').getAttribute('data-id'),
         cantidad: 1
