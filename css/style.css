@@ -427,7 +427,7 @@ flex-shrink: 0;
     #carrito {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 14px;
     width: 240px;
     height: 46px;
     flex-shrink: 0;
@@ -643,10 +643,10 @@ ul {
     right: 0;
     top: 100%;
     z-index: 1;
-    background-color: white;
+    background-color: #E3A55C;
     padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+    min-height: 300px;
+    min-width: 200px;
 }
 .submenu #carrito {
     display: none;
