@@ -1,3 +1,21 @@
+/*const url = 'https://foodiefetch.p.rapidapi.com/swiggy?query=grandamas%20cafe%20pune';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '8717dda432msh1b1518c3848ba93p143b5ejsn4e98f8abfd30',
+		'X-RapidAPI-Host': 'foodiefetch.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}*/
+
+
 
 /*Swal.fire({
     icon: 'error',
