@@ -1,21 +1,3 @@
-/*const url = 'https://foodiefetch.p.rapidapi.com/swiggy?query=grandamas%20cafe%20pune';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '8717dda432msh1b1518c3848ba93p143b5ejsn4e98f8abfd30',
-		'X-RapidAPI-Host': 'foodiefetch.p.rapidapi.com'
-	}
-};
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}*/
-
-
 
 /*Swal.fire({
     icon: 'error',
@@ -43,12 +25,43 @@ try {
 console.log (document)
 console.log (localStorage)
 
+
+localStorage.setItem ("Producto", "Café")
+localStorage.setItem ("Precio", 85)
+localStorage.setItem ("valido", true)
+
+let producto = localStorage.getItem ("Café")
+
+localStorage.setItem ("Producto", "Latte")
+localStorage.setItem ("Precio", 95)
+localStorage.setItem ("valido", true)
+
+let producto2 = localStorage.getItem ("Latte")
+
+localStorage.setItem ("Producto", "Chocochino")
+localStorage.setItem ("Precio", 105)
+localStorage.setItem ("valido", true)
+
+let producto3 = localStorage.getItem ("Chocochino")
+
+localStorage.setItem ("Producto", "Machiatto")
+localStorage.setItem ("Precio", 115)
+localStorage.setItem ("valido", true)
+
+let producto4 = localStorage.getItem ("Machiatto")
+
+localStorage.setItem ("Producto", "Té")
+localStorage.setItem ("Precio", 80)
+localStorage.setItem ("valido", true)
+
+let producto5 = localStorage.getItem ("Té")
+
 /*localStorage.setItem ("nombre", "fabricio");
  localStorage.getItem ("nombre")
 let nombre = localStorage.getItem ("fabricio")*/
 
-localStorage.removeItem ("nombre");
-localStorage.removeItem ("juegos")
+/*localStorage.removeItem ("nombre");
+localStorage.removeItem ("juegos")*/
 
 //let login = prompt ("usuario");
  //let usuario = "fabricio";
@@ -137,26 +150,7 @@ function agregarProducto(evt){
         leerDatosProducto(producto)
     } 
 }
- 
-function carritoHTML(){
-    vaciarCarrito()
-    articulosCarrito.forEach( producto => {
-        const fila = document.createElement('tr');
-        fila.innerHTML = `
-            <td>
-                <img src="${producto.imagen}" width="100" />
-            </td>
-            <td>${producto.titulo}</td>
-            <td>${producto.precio}</td>
-            <td>${producto.cantidad}</td>
-            <td>
-                <a href="#" class="borrar-producto" data-id="${producto.id}">X</a>
-            </td>
-        `;
-        contenedorCarrito.appendChild(fila)
-    })
 
-}
 function leerDatosProducto(item){
     const infoProducto = {
         imagen: item.querySelector('img').src,
@@ -186,6 +180,27 @@ function leerDatosProducto(item){
 }
 
  
+function carritoHTML(){
+    vaciarCarrito()
+    articulosCarrito.forEach( producto => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>
+                <img src="${producto.imagen}" width="100" />
+            </td>
+            <td>${producto.titulo}</td>
+            <td>${producto.precio}</td>
+            <td>${producto.cantidad}</td>
+            <td>
+                <a href="#" class="borrar-producto" data-id="${producto.id}">X</a>
+            </td>
+        `;
+        contenedorCarrito.appendChild(fila)
+    })
+
+}
+
+
   function vaciarCarrito(){
     while(contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
