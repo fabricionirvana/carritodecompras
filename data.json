@@ -1,15 +1,8 @@
 {
     "data": {
       "About": {
-        "Name": "Grandmama's Cafe",
-        "Ratings": "4.0",
-        "Locality": "Iricen Railway Colony",
-        "AreaName": "Koregaon Park",
-        "City": "Pune",
-        "Cuisines": [
-          "Italian",
-          "American"
-        ]
+        "name": "Frankscoffe"
+
       },
       "Menu": [
 

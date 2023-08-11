@@ -1,3 +1,23 @@
+const obtenerDatosAPI =  async () => {
+    try{
+        const resultado =  await fetch("http://picsum.photos/list/") 
+        console.log(resultado)
+        const json = await resultado.json()
+        console.log(json)
+        render(json)
+    } catch (error){
+       
+    } finally {
+        
+    }
+            
+}
+
+
+document.addEventListener('DOMContentLoaded', obtenerDatosAPI)
+
+
+
 
 /*Swal.fire({
     icon: 'error',
@@ -146,7 +166,7 @@ function eliminarProducto(evt){
 function agregarProducto(evt){
     evt.preventDefault()
     if(evt.target.classList.contains('agregar-carrito')){
-        const producto = evt.target.parentElement.parentElement
+        const producto = evt.target.parentElement.parentElement;
         leerDatosProducto(producto)
     } 
 }
